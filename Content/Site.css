@@ -1,0 +1,97 @@
+
+body {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+    font-family: "微軟正黑體", Georgia, "Times New Roman", Times, serif;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    /*max-width: 280px;*/
+}
+
+
+.navbar-brand {
+    margin-right: 5px !important;
+}
+
+.datepicker {
+    font-size: 0.875em;
+}
+
+
+    .datepicker td, .datepicker th {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+.box {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+    .box a, a.box {
+        border: solid #337fa5 1px;
+        padding: 5px 3px !important;
+        background: #61c9f7;
+        font-weight: bold;
+        border-radius: 10px;
+        width: 7.3rem;
+        text-align: center;
+        margin-right: 3px !important;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+
+.divInfo {
+    border: solid #ddd 1px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #F1F1F1;
+}
+
+    .divInfo label {
+        color: #666;
+    }
+
+.enUS-text {
+    font-size: 0.8rem;
+}
+
+.text-title {
+    font-weight: bold;
+    color: #0d2fb1;
+}
+
+.formBox {
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    padding: 15px 5px 2px 5px;
+    margin: 10px auto;
+}
+
+.notifyjs-corner {
+    top: 15% !important;
+}
+
+.form-check .form-check-input[type=checkbox] {
+    border-radius: .25rem;
+    height: 1rem;
+    width: 1rem;
+}

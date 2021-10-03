@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <title>輔仁大學自主健康管理平台 FJCU Self-Health Management Platform</title>
+
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css"
+        rel="stylesheet" />
+    <link href="../Content/fjufont.css" rel="stylesheet" />
+
+    <script src="../bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+
+
+    <style type="text/css">
+        .zh-level1 {
+            text-indent: -2em;
+            margin-left: 2em;
+        }
+
+        .en_level1 {
+            text-indent: -1em;
+            margin-left: 1em;
+        }
+    </style>
+
+
+    <style>
+        .navbar {
+            padding: 0.1rem;
+        }
+
+        .changeLang {
+            font-size: 0.8rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light navbar-toggleable-sm bg-white border-bottom box-shadow mb-3"
+            style="background-color: #e3f2fd;">
+            <div class="container">
+                <img src="../fju-logo.png" style="height:50px;vertical-align:text-bottom" />
+                <a class="navbar-brand" href="" style="line-height:1.1rem;">
+                    輔仁大學自主健康管理平台 <br />
+                    <span class="enUS-text">FJCU Self-Health Management Platform</span>
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                    class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav mr-auto ml-1 menu">
+
+                        <li class="nav-item">
+
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="../Questionnaire/Daily.html"
+                                style="width:75px">
+                                填報健康狀況
+                            </a>
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="../Questionnaire/Travel.html"
+                                style="width:75px">
+                                新增旅遊史
+                            </a>
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="../LocationGuest/index.html"
+                                style="width:75px">
+                                FJCU實聯制
+                            </a>
+
+
+                        </li>
+
+
+
+
+
+                    </ul>
+                </div>
+
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle a-text changeLang" data-toggle="dropdown" href="#"
+                                role="button" aria-haspopup="true" aria-expanded="false">Language</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item changeLang"
+                                    href="/Home/SetCulture?culture=zh-TW&amp;returnUrl=%2FHome%2FIndex">中文</a>
+                                <a class="dropdown-item changeLang"
+                                    href="/Home/SetCulture?culture=en-US&amp;returnUrl=%2FHome%2FIndex">English</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link">
+                                <a href="../index.html" class="eudcFont">徐浤瑋 您好</a>
+                            </span>
+                        </li>
+                        <li>
+                            <a href="../User/Logout.html" class="nav-link btn btn-outline-secondary">登出</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3" style="min-height: 500px;">
+
+
+
+            <div class="container p-3 my-3">
+                <h2 class="text-center">輔大校園傳染病防治調查</h2>
+
+                <p>衛生福利部中華民國 109 年 1 月 15 日衛授疾字第 1090100030
+                    號公告，新增「嚴重特殊傳染性肺炎」為第五類法定傳染病。學校重視您和校園教職員工生的身體狀況與健康，我們一起維護健康環境，以因應嚴重特殊傳染性肺炎(2019新冠狀病毒肺炎)防疫管理措施，配合中央流行疫情指揮中心及教育部之政策，敬請惠予填答，以共同維護校園師生健康安全。即日起至疫情結束，請全體教職員工生填報每日健康狀況表，若近期有個人旅遊史(自109/1/20日起)亦需填報，以利政府和學校後續提供您健康關懷與諮詢，謝謝！
+                </p>
+
+                <p>個資聲明：本表所蒐集之個人資訊，將作為本校防疫業務聯絡，及衛生單位防疫之用。請據實填報，以利防疫，如有隱匿病情導致疫情擴散，將可能遭相關法律追究。</p>
+
+                <p class="zh-level1">
+                    一、經由中央流行疫情指揮中心公告旅遊疫情三級警告國家入境 （包括轉機）之學生及教職員工，請於入境後起14
+                    日內在家休息，避免到校上課上班。提醒您應避免出入公共場所，請戴口罩自主健康管理，每日早晚量測及通報體溫並回報人事室持續共14天。
+                </p>
+
+                <p class="zh-level1">
+                    二、活動範圍以房間為主，避免與其他人接觸。應經常以肥皂洗手，特別是在接觸呼吸道分泌物、尿液或糞便等體液後。不要與他人共用物品，環境應以漂白水進行清潔，若體溫>38
+                    ℃或呼吸道不適等類流感症狀，且有中港澳旅遊史或是有接觸新型冠狀病毒肺炎感染者的人，請立即通報1922，並依相關單位指示協助轉送醫院治療。
+                </p>
+
+                <p class="zh-level1">
+                    三、注意事項：
+                    <ol>
+                        <li>遵守生病時在家休息，不出門，減少或避免與他人接觸的原則。</li>
+                        <li>咳嗽或打噴嚏時，使用紙巾或衣袖遮住口鼻。</li>
+                        <li>只要仍存有呼吸道症狀就應持續戴口罩。</li>
+                        <li>教室、辦公室及大型活動應進行環境漂白水消毒，並採限制單一入口，進入一律應進行體溫測量，發燒即速進行校內傳染病通報。</li>
+                        <li>
+                            環境消毒建議：
+                            <ol>
+                                <li>一般的環境：如課桌椅、電梯按鍵面板、把手、家具、廚房，消毒使用1：100的稀釋漂白水（500 ppm）</li>
+                                <li>浴室或馬桶表面：使用1：10的稀釋漂白水（5000 ppm）消毒</li>
+                                <li>消毒應該每天至少一次，並使用"當天"泡製的漂白水</li>
+                                <li>室內須維持良好的通風及空氣清潔</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </p>
+
+                <p class="zh-level1">
+                    四、相關資訊可至衛生福利部疾病管制署全球資訊網「嚴重特殊傳染性肺炎」專區 <a href="http://0rz.tw/3Wcod"
+                        target="_blank">http://0rz.tw/3Wcod</a> 查詢。
+                    各項工作將隨中央流行疫情指揮中心的管制有所變動。
+                </p>
+
+                <p class="zh-level1">
+                    五、校園傳染病防治及環境消毒注意事項提醒 <a href="http://health.dsa.fju.edu.tw/#&panel1-2"
+                        target="_blank">http://health.dsa.fju.edu.tw/#&panel1-2</a>
+                </p>
+
+                <p>輔仁大學關心您的健康</p>
+            </div>
+
+
+
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - 輔仁大學自主健康管理平台 FJCU Self-Health Management Platform
+            <span class="pl-5" style="color: #efefef;">v.20211001.003</span>
+        </div>
+    </footer>
+
+
+    <script src="../bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+
+    <script src="../bundles/bootstrap?v=w6BYJb0bUOvf8s68Ce8tszYipolOdhcRhcKpxn6l8841"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js">
+    </script>
+
+    <script src="../Scripts/App/ShareFunctions.js"></script>
+
+
+
+</body>
+
+</html>

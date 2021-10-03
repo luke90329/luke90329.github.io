@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <title>輔仁大學自主健康管理平台 FJCU Self-Health Management Platform</title>
+
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css"
+        rel="stylesheet" />
+    <link href="../Content/fjufont.css" rel="stylesheet" />
+
+    <script src="../bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+
+
+    <style type="text/css">
+        .table-sm th,
+        .table-sm td {
+            font-size: 90%;
+        }
+
+        div.form-group label:first-child {
+            font-weight: bold;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.min.css" rel="stylesheet" />
+
+
+    <style>
+        .navbar {
+            padding: 0.1rem;
+        }
+
+        .changeLang {
+            font-size: 0.8rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light navbar-toggleable-sm bg-white border-bottom box-shadow mb-3"
+            style="background-color: #e3f2fd;">
+            <div class="container">
+                <img src="../fju-logo.png" style="height:50px;vertical-align:text-bottom" />
+                <a class="navbar-brand" href="../Home/index.html" style="line-height:1.1rem;">
+                    輔仁大學自主健康管理平台 <br />
+                    <span class="enUS-text">FJCU Self-Health Management Platform</span>
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                    class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav mr-auto ml-1 menu">
+
+                        <li class="nav-item">
+
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="Daily.html" style="width:75px">
+                                填報健康狀況
+                            </a>
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="" style="width:75px">
+                                新增旅遊史
+                            </a>
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="../LocationGuest/index.html"
+                                style="width:75px">
+                                FJCU實聯制
+                            </a>
+
+
+                        </li>
+
+
+
+
+
+                    </ul>
+                </div>
+
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle a-text changeLang" data-toggle="dropdown" href="#"
+                                role="button" aria-haspopup="true" aria-expanded="false">Language</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item changeLang"
+                                    href="/Home/SetCulture?culture=zh-TW&amp;returnUrl=%2FQuestionnaire%2FTravel">中文</a>
+                                <a class="dropdown-item changeLang"
+                                    href="/Home/SetCulture?culture=en-US&amp;returnUrl=%2FQuestionnaire%2FTravel">English</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link">
+                                <a href="../index.html" class="eudcFont">徐浤瑋 您好</a>
+                            </span>
+                        </li>
+                        <li>
+                            <a href="../User/Logout.html" class="nav-link btn btn-outline-secondary">登出</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3" style="min-height: 500px;">
+
+
+
+            <div>
+                <h4>TOCC調查</h4>
+
+
+
+                <div class="divInfo">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label class="col-form-label col-form-label-sm">學號</label>
+                                <input type="text" readonly class="form-control form-control-sm" value="408402286">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="col-form-label col-form-label-sm">姓名</label>
+                                <input type="text" readonly class="form-control form-control-sm eudcFont" value="徐浤瑋">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label class="col-form-label col-form-label-sm">系所或單位名稱</label>
+                                <input type="text" readonly class="form-control form-control-sm" value="管理學院">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <form id="myForm" method="post" action="Daily.html">
+                    <input name="__RequestVerificationToken" type="hidden"
+                        value="JQEbH-3JVdUZW_9iJCoYcc_IqHFJsJ2srOG0AAkOVu4HoBz41Tsm4uyylNjQox-2Ogemjkt9ohPFlVFYWfOBf3zyWHNxzo9oYX4HhtDLIIY1" />
+                    <input type="hidden" name="Account" value="408402286">
+                    <input type="hidden" name="TravelCountry">
+
+
+                    <div class="form-group mt-2">
+                        <label><span class="text-danger">*</span>1 旅遊史(Travel) ：近期有沒有出、入境歷史？</label>
+                        <br />
+                        <div class="custom-control custom-radio custom-control-inline ml-3 mr-3">
+                            <input type="radio" id="rdoTravelStatus1" name="IsTravel" class="custom-control-input"
+                                value="1" required>
+                            <label class="custom-control-label" for="rdoTravelStatus1">有</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="rdoTravelStatus2" name="IsTravel" class="custom-control-input"
+                                value="0" required>
+                            <label class="custom-control-label" for="rdoTravelStatus2">無</label>
+                        </div>
+                    </div>
+                    <div id="divTravelDetail" class="ml-5">
+                        <div class="form-row">
+                            <label for="txtEntryDate">入境台灣時間 : </label>
+                            <div class="form-group col-md-2">
+                                <input type="text" class="form-control datepicker" id="txtEntryDate" name="EntryDate"
+                                    placeholder="入境日期" data-date-format="yyyy/mm/dd">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <label>去哪個地區？</label>
+                            <div class="col-sm-3">
+                                <select id="selCountryName" name="CountryName" class="form-control">
+                                    <option value="">請選擇</option>
+                                    <option value="中國">中國 - China</option>
+                                    <option value="香港">香港 - Hong Kong</option>
+                                    <option value="澳門">澳門 - Macao</option>
+                                    <option value="新加坡">新加坡 - Singapore</option>
+                                    <option value="日本">日本 - Japan</option>
+                                    <option value="韓國">韓國 - Korea</option>
+                                    <option value="泰國">泰國 - Thailand</option>
+                                    <option value="馬來西亞">馬來西亞 - Malaysia</option>
+                                    <option value="越南">越南 - Vietnam</option>
+                                    <option value="德國">德國 - Germany</option>
+                                    <option value="澳洲">澳洲 - Australia</option>
+                                    <option value="美國">美國 - United States</option>
+                                    <option value="法國">法國 - France</option>
+                                    <option value="英國">英國 - United Kingdom</option>
+                                    <option value="阿聯">阿聯 - Allianz</option>
+                                    <option value="加拿大">加拿大 - Canada</option>
+                                    <option value="印度">印度 - India</option>
+                                    <option value="菲律賓">菲律賓 - Philippines</option>
+                                    <option value="義大利">義大利 - Italy</option>
+                                    <option value="俄羅斯">俄羅斯 - Russia</option>
+                                    <option value="西班牙">西班牙 - Spain</option>
+                                    <option value="斯里蘭卡">斯里蘭卡 - Sri Lanka</option>
+                                    <option value="芬蘭">芬蘭 - Finland</option>
+                                    <option value="柬埔寨">柬埔寨 - Cambodia</option>
+                                    <option value="尼泊爾">尼泊爾 - Nepal</option>
+                                    <option value="比利時">比利時 - Belgium</option>
+                                    <option value="瑞典">瑞典 - Sweden</option>
+                                    <option value="埃及">埃及 - Egypt</option>
+                                    <option value="伊朗">伊朗 - Iran</option>
+                                    <option value="印尼">印尼 - Indonesia</option>
+                                    <option value="千里達">千里達 - TRINIDAD AND TOBAGO</option>
+                                    <option value="土耳其">土耳其 - TURKEY</option>
+                                    <option value="土克斯及開科斯群島">土克斯及開科斯群島 - TURKS AND CAICOS ISLANDS</option>
+                                    <option value="土庫曼">土庫曼 - TRUKMENISTAN</option>
+                                    <option value="大溪地">大溪地 - TAHITI</option>
+                                    <option value="不丹">不丹 - BHUTAN</option>
+                                    <option value="中非">中非 - CENTRAL AFRICAN REPUBLIC</option>
+                                    <option value="丹麥">丹麥 - DENMARK</option>
+                                    <option value="厄瓜多">厄瓜多 - ECUADOR</option>
+                                    <option value="厄利垂亞">厄利垂亞 - ERITREA</option>
+                                    <option value="巴布亞紐幾內亞">巴布亞紐幾內亞 - PAPUA NEW GUINEA</option>
+                                    <option value="巴西">巴西 - BRAZIL</option>
+                                    <option value="巴貝多">巴貝多 - BARBADOS</option>
+                                    <option value="巴拉圭">巴拉圭 - PARAGUAY</option>
+                                    <option value="巴林">巴林 - BAHRAIN</option>
+                                    <option value="巴哈馬">巴哈馬 - BAHAMAS</option>
+                                    <option value="巴拿馬">巴拿馬 - PANAMA</option>
+                                    <option value="巴基斯坦">巴基斯坦 - PAKISTAN</option>
+                                    <option value="牙買加">牙買加 - JAMAICA</option>
+                                    <option value="以色列">以色列 - ISRAEL</option>
+                                    <option value="加彭">加彭 - GABON</option>
+                                    <option value="北馬里亞納群島">北馬里亞納群島 - NORTHERN MARIANA ISLANDS</option>
+                                    <option value="北韓">北韓 - KOREA, DEMOCRATIC PEOPLE&#39;S REPUBLIC OF</option>
+                                    <option value="卡達">卡達 - QATAR</option>
+                                    <option value="可可斯群島">可可斯群島 - COCOS（KEELING）ISLANDS</option>
+                                    <option value="古巴">古巴 - CUBA</option>
+                                    <option value="史瓦濟蘭">史瓦濟蘭 - SWAZILAND</option>
+                                    <option value="尼日">尼日 - NIGER</option>
+                                    <option value="尼加拉瓜">尼加拉瓜 - NICARAGUA</option>
+                                    <option value="布吉納法索">布吉納法索 - BURKINA FASO</option>
+                                    <option value="瓜地馬拉">瓜地馬拉 - GUATEMALA</option>
+                                    <option value="瓜德魯普島">瓜德魯普島 - GUADELOUPE</option>
+                                    <option value="甘比亞">甘比亞 - GAMBIA</option>
+                                    <option value="白俄羅斯">白俄羅斯 - BELARUS</option>
+                                    <option value="皮特康島">皮特康島 - PITCAIRN</option>
+                                    <option value="立陶宛">立陶宛 - LITHUANIA</option>
+                                    <option value="伊拉克">伊拉克 - IRAQ</option>
+                                    <option value="冰島">冰島 - ICELAND</option>
+                                    <option value="列支敦斯登">列支敦斯登 - LIECHTENSTEIN</option>
+                                    <option value="匈牙利">匈牙利 - HUNGARY</option>
+                                    <option value="吉布地">吉布地 - DJIBOUTI</option>
+                                    <option value="吉里巴斯">吉里巴斯 - KIRIBATI</option>
+                                    <option value="吉爾吉斯">吉爾吉斯 - KYRGYZSTAN</option>
+                                    <option value="吐瓦魯">吐瓦魯 - TUVALU</option>
+                                    <option value="多米尼克">多米尼克 - DOMINICA</option>
+                                    <option value="多明尼加">多明尼加 - DOMINICAN REPUBLIC</option>
+                                    <option value="多哥">多哥 - TOGO</option>
+                                    <option value="安地卡及巴布達">安地卡及巴布達 - ANTIGUA AND BARBUDA</option>
+                                    <option value="安哥拉">安哥拉 - ANGOLA</option>
+                                    <option value="安道爾">安道爾 - ANDORRA</option>
+                                    <option value="托克勞群島">托克勞群島 - TOKELAU</option>
+                                    <option value="百慕達">百慕達 - BERMUDA</option>
+                                    <option value="西撒哈拉">西撒哈拉 - WESTERN SAHARA</option>
+                                    <option value="克羅埃西亞">克羅埃西亞 - CROACIA</option>
+                                    <option value="利比亞">利比亞 - LIBYAN ARAB JAMAHIRIYA</option>
+                                    <option value="宏都拉斯">宏都拉斯 - HONDURAS</option>
+                                    <option value="希臘">希臘 - GREECE</option>
+                                    <option value="沙烏地阿拉伯">沙烏地阿拉伯 - SAUDI ARABIA</option>
+                                    <option value="沃里斯與伏塔那島">沃里斯與伏塔那島 - WALLIS AND FUTUNA ISLANDS</option>
+                                    <option value="汶萊">汶萊 - BRUNEI DARUSSALAM</option>
+                                    <option value="貝里斯">貝里斯 - BELIZE</option>
+                                    <option value="貝南">貝南 - BENIN</option>
+                                    <option value="赤道幾內亞">赤道幾內亞 - EQUATORIAL GUINEA</option>
+                                    <option value="辛巴威">辛巴威 - ZIMBABWE</option>
+                                    <option value="亞美尼亞">亞美尼亞 - ARMENIA</option>
+                                    <option value="亞塞拜然">亞塞拜然 - AZERBAIJAN</option>
+                                    <option value="依索比亞">依索比亞 - ETHIOPIA</option>
+                                    <option value="坦尚尼亞">坦尚尼亞 - TANZANIA, UNITED REPUBLIC OF</option>
+                                    <option value="奈及利亞">奈及利亞 - NIGERIA</option>
+                                    <option value="委內瑞拉">委內瑞拉 - VENEZUELA</option>
+                                    <option value="孟加拉">孟加拉 - BANGLADESH</option>
+                                    <option value="尚比亞">尚比亞 - ZAMBIA</option>
+                                    <option value="帛琉群島">帛琉群島 - PALAU</option>
+                                    <option value="拉脫維亞">拉脫維亞 - LATVIA</option>
+                                    <option value="東加">東加 - TONGA</option>
+                                    <option value="波士尼亞">波士尼亞 - BOSNIA AND HERZEGOVINA</option>
+                                    <option value="波札那">波札那 - BOTSWANA</option>
+                                    <option value="波多黎各">波多黎各 - PUERTO RICO</option>
+                                    <option value="波維特島">波維特島 - BOUVET ISLAND</option>
+                                    <option value="波蘭">波蘭 - POLAND</option>
+                                    <option value="法羅群島">法羅群島 - FAROE ISLANDS</option>
+                                    <option value="法屬圭亞那">法屬圭亞那 - FRENCH GUIANA</option>
+                                    <option value="法屬南部屬地">法屬南部屬地 - FRENCH SOUTHERN TERRITORIES</option>
+                                    <option value="法屬玻里尼西亞">法屬玻里尼西亞 - FRENCH POLYNESIA</option>
+                                    <option value="法屬馬丁尼克">法屬馬丁尼克 - MARTINIQUE</option>
+                                    <option value="直布羅陀">直布羅陀 - GIBRALTAR</option>
+                                    <option value="肯亞">肯亞 - KENYA</option>
+                                    <option value="阿拉伯聯合大公國">阿拉伯聯合大公國 - UNITED ARAB EMIRTES</option>
+                                    <option value="阿根廷">阿根廷 - ARGENTINA</option>
+                                    <option value="阿曼">阿曼 - OMAN</option>
+                                    <option value="阿富汗">阿富汗 - AFGHANISTAN</option>
+                                    <option value="阿爾及利亞">阿爾及利亞 - ALGERIA</option>
+                                    <option value="阿爾巴尼亞">阿爾巴尼亞 - ALBANIA</option>
+                                    <option value="阿魯巴">阿魯巴 - ARUBA</option>
+                                    <option value="保加利亞">保加利亞 - BULGARIA</option>
+                                    <option value="南非">南非 - SOUTH AFRICA</option>
+                                    <option value="南喬治亞及南桑威奇群島">南喬治亞及南桑威奇群島 - SOUTH GEORGIA AND THE SOUTH SANDWICH
+                                        ISLANDS</option>
+                                    <option value="南斯拉夫">南斯拉夫 - YUGOSLAVIA</option>
+                                    <option value="南極洲">南極洲 - ANTARCTICA</option>
+                                    <option value="哈薩克">哈薩克 - KAZAKHSTAN</option>
+                                    <option value="帝汶">帝汶 - EAST TIMOR</option>
+                                    <option value="查德">查德 - CHAD</option>
+                                    <option value="玻利維亞">玻利維亞 - BOLIVIA</option>
+                                    <option value="科克群島">科克群島 - COOK ISLANDS</option>
+                                    <option value="科威特">科威特 - KUWAIT</option>
+                                    <option value="突尼西亞">突尼西亞 - TUNISIA</option>
+                                    <option value="約旦">約旦 - JORDAN</option>
+                                    <option value="美亞特">美亞特 - MAYOTTE</option>
+                                    <option value="美屬維爾京群島">美屬維爾京群島 - VIRGIN ISLANDS U.S.</option>
+                                    <option value="美屬薩摩亞">美屬薩摩亞 - AMERICAN SAMOA</option>
+                                    <option value="美屬邊疆群島">美屬邊疆群島 - UNITED STATES MINOR OUTLYING ISLANDS</option>
+                                    <option value="茅利塔尼亞">茅利塔尼亞 - MAURITANIA</option>
+                                    <option value="英屬印度洋地區">英屬印度洋地區 - BRITISH INDIAN OCEAN TERRITORY</option>
+                                    <option value="英屬安圭拉">英屬安圭拉 - ANGUILLA</option>
+                                    <option value="英屬維爾京群島">英屬維爾京群島 - VIRGIN ISLANDS BRITISH</option>
+                                    <option value="迦納">迦納 - GHANA</option>
+                                    <option value="剛果民主共和國">剛果民主共和國 - CONGO,THE DEMOCRATIC REPUBLIC OF THE</option>
+                                    <option value="剛果共和國">剛果共和國 - CONGO</option>
+                                    <option value="哥倫比亞">哥倫比亞 - COLOMBIA</option>
+                                    <option value="哥斯大黎加">哥斯大黎加 - COSTA RICA</option>
+                                    <option value="挪威">挪威 - NORWAY</option>
+                                    <option value="格陵蘭">格陵蘭 - GREENLAND</option>
+                                    <option value="格瑞那達">格瑞那達 - GRENADA</option>
+                                    <option value="浦隆地">浦隆地 - BURUNDI</option>
+                                    <option value="海地">海地 - HAITI</option>
+                                    <option value="烏干達">烏干達 - GUANDA</option>
+                                    <option value="烏克蘭">烏克蘭 - UKRAINE</option>
+                                    <option value="烏拉圭">烏拉圭 - URUGUAY</option>
+                                    <option value="烏茲別克">烏茲別克 - UZBEKISTAN</option>
+                                    <option value="琉球">琉球 - RYUKYU</option>
+                                    <option value="留尼旺">留尼旺 - REUNION</option>
+                                    <option value="秘魯">秘魯 - PERU</option>
+                                    <option value="索馬利亞">索馬利亞 - SOMALIA</option>
+                                    <option value="索羅門群島">索羅門群島 - SOLOMON ISLANDS</option>
+                                    <option value="紐西蘭">紐西蘭 - NEW ZEALAND</option>
+                                    <option value="紐威島">紐威島 - NIUE</option>
+                                    <option value="納米比亞">納米比亞 - NAMIBIA</option>
+                                    <option value="納維斯">納維斯 - NEVIS</option>
+                                    <option value="馬利">馬利 - MALI</option>
+                                    <option value="馬其頓">馬其頓 - MACEDONIA</option>
+                                    <option value="馬拉威">馬拉威 - MALAWI</option>
+                                    <option value="馬紹爾群島">馬紹爾群島 - MARSHALL ISLANDS</option>
+                                    <option value="馬達加斯加">馬達加斯加 - MADAGASCAR</option>
+                                    <option value="馬爾他">馬爾他 - MALTA</option>
+                                    <option value="馬爾地夫">馬爾地夫 - MALDIVES</option>
+                                    <option value="密克羅尼西亞">密克羅尼西亞 - MICRONESIA（FEDERATED STATED OF）</option>
+                                    <option value="捷克">捷克 - CZECH REPUBLIC</option>
+                                    <option value="教廷">教廷 - HOLY SEE（VATICAN CITY STATE）</option>
+                                    <option value="敘利亞">敘利亞 - SYRIAN ARAB REPUBLIC</option>
+                                    <option value="莫三比克">莫三比克 - MOZAMBIQUE</option>
+                                    <option value="荷屬安地列斯">荷屬安地列斯 - NETHERLANDS ANTILLES</option>
+                                    <option value="荷蘭">荷蘭 - NETHERLANDS</option>
+                                    <option value="喀麥隆">喀麥隆 - CAMEROON</option>
+                                    <option value="喬治亞">喬治亞 - GEORGIA</option>
+                                    <option value="幾內亞">幾內亞 - GUINEA</option>
+                                    <option value="幾內亞比索">幾內亞比索 - GUINEA-BISSAU</option>
+                                    <option value="斐濟群島">斐濟群島 - FIJI</option>
+                                    <option value="斯瓦巴及尖棉島">斯瓦巴及尖棉島 - SVALBARD AND JAN MAYEN</option>
+                                    <option value="斯洛凡尼亞">斯洛凡尼亞 - SLOVENIA</option>
+                                    <option value="斯洛伐克">斯洛伐克 - SLOVAKIA</option>
+                                    <option value="智利">智利 - CHILE</option>
+                                    <option value="象牙海岸">象牙海岸 - COTE D&#39;IVOIRE</option>
+                                    <option value="開曼群島">開曼群島 - CAYMAN ISLANDS</option>
+                                    <option value="塞內加爾">塞內加爾 - SENEGAL</option>
+                                    <option value="塞席爾">塞席爾 - SEYCHELLES</option>
+                                    <option value="塞爾維亞">塞爾維亞 - SERBIA, REPUBLIC OF</option>
+                                    <option value="塔吉克">塔吉克 - TAJIKISTAN</option>
+                                    <option value="奧地利">奧地利 - AUSTRIA</option>
+                                    <option value="愛沙尼亞">愛沙尼亞 - ESTONIA</option>
+                                    <option value="愛爾蘭">愛爾蘭 - IRELAND</option>
+                                    <option value="新喀里多尼亞島">新喀里多尼亞島 - NEW CALEDDNIA</option>
+                                    <option value="獅子山">獅子山 - SIERRA LEONE</option>
+                                    <option value="瑞士">瑞士 - SWITZERLAND</option>
+                                    <option value="萬那杜">萬那杜 - VANUATU</option>
+                                    <option value="聖匹及密啟倫群島">聖匹及密啟倫群島 - ST. PIERRE AND MIQUELON</option>
+                                    <option value="聖文森">聖文森 - SAINT VINCENT AND THE GRENADINES</option>
+                                    <option value="聖多美及普林西比">聖多美及普林西比 - SAO TOME AND PRINCIPE</option>
+                                    <option value="聖克里斯多福">聖克里斯多福 - SAINT KITTS AND NEVIS</option>
+                                    <option value="聖馬利諾">聖馬利諾 - SAN MARINO</option>
+                                    <option value="聖赫勒拿島">聖赫勒拿島 - ST. HELENA</option>
+                                    <option value="聖誕島">聖誕島 - CHRISTMAS ISLAND</option>
+                                    <option value="聖露西亞">聖露西亞 - SAINT LUCIA</option>
+                                    <option value="葉門">葉門 - YEMEN</option>
+                                    <option value="葛摩">葛摩 - COMOROS</option>
+                                    <option value="葡萄牙">葡萄牙 - PORTUGAL</option>
+                                    <option value="福克蘭群島">福克蘭群島 - FALKLAND ISLANDS（MALVINAS）</option>
+                                    <option value="維德角島">維德角島 - CAPE VERDE</option>
+                                    <option value="臺灣，中華民國">臺灣，中華民國 - TAIWAN, REPUBLIC OF CHINA</option>
+                                    <option value="蒙古">蒙古 - MONGOLIA</option>
+                                    <option value="蒙瑟拉特島">蒙瑟拉特島 - MONTSERRAT</option>
+                                    <option value="蓋亞那">蓋亞那 - GUYANA</option>
+                                    <option value="赫德及麥當勞群島">赫德及麥當勞群島 - HEARD AND MCDONALD ISLANDS</option>
+                                    <option value="寮國">寮國 - LAO PEOPLE&#39;S DEMOCRATIC REPUBLIC</option>
+                                    <option value="摩洛哥">摩洛哥 - MOROCCO</option>
+                                    <option value="摩納哥">摩納哥 - MONACO</option>
+                                    <option value="摩爾多瓦">摩爾多瓦 - MOLDOVA REPUBLIC OF</option>
+                                    <option value="模里西斯">模里西斯 - MAURITIUS</option>
+                                    <option value="緬甸">緬甸 - MYANMAR</option>
+                                    <option value="黎巴嫩">黎巴嫩 - LEBANON</option>
+                                    <option value="墨西哥">墨西哥 - MEXICO</option>
+                                    <option value="澳大利亞">澳大利亞 - AUSTRALIA</option>
+                                    <option value="盧安達">盧安達 - RWANDA</option>
+                                    <option value="盧森堡">盧森堡 - LUXEMBOURG</option>
+                                    <option value="諾福克群島">諾福克群島 - NORFOLK ISLAND</option>
+                                    <option value="諾魯">諾魯 - NAURU</option>
+                                    <option value="賴比瑞亞">賴比瑞亞 - LIBERIA</option>
+                                    <option value="賴索托">賴索托 - LESOTHO</option>
+                                    <option value="賽普勒斯">賽普勒斯 - CYPRUS</option>
+                                    <option value="薩爾瓦多">薩爾瓦多 - EL SALVADOR</option>
+                                    <option value="薩摩亞群島">薩摩亞群島 - SAMOA</option>
+                                    <option value="羅馬尼亞">羅馬尼亞 - ROMANIA</option>
+                                    <option value="關島">關島 - GUAM</option>
+                                    <option value="蘇丹">蘇丹 - SUDAN</option>
+                                    <option value="蘇利南">蘇利南 - SURINAME</option>
+                                    <option value="不詳">不詳 - Unknown</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input type="text" class="form-control datepicker" id="txtEntryDate9" name="EntryDate9"
+                                    placeholder="入境日期" data-date-format="yyyy/mm/dd">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input type="text" class="form-control datepicker" id="txtOutboundDate9"
+                                    name="OutboundDate9" placeholder="出境日期" data-date-format="yyyy/mm/dd">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mt-2">
+                        <label><span class="text-danger">*</span>2 職業(Occupation) ：從事甚麼工作(工讀、實習等)？</label>
+                        <br />
+                        <div class="custom-control custom-radio custom-control-inline ml-3 mr-3">
+                            <input type="radio" id="rdoOccupationStatus1" name="OccupationStatus"
+                                class="custom-control-input" value="1" required>
+                            <label class="custom-control-label" for="rdoOccupationStatus1">有</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="rdoOccupationStatus2" name="OccupationStatus"
+                                class="custom-control-input" value="0" required>
+                            <label class="custom-control-label" for="rdoOccupationStatus2">無</label>
+                        </div>
+                        <div class="ml-3">
+                            <input type="text" class="form-control" id="txtOccupationMemo" name="OccupationMemo"
+                                maxlength="100" placeholder="請說明">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mt-2">
+                        <label><span class="text-danger">*</span>3 接觸史(Contact) ：有沒有接觸疑似嚴重特殊傳染性肺炎病患？有沒有接觸禽畜類動物？</label>
+                        <br />
+                        <div class="custom-control custom-radio custom-control-inline ml-3 mr-3">
+                            <input type="radio" id="rdoContactStatus1" name="ContactStatus" class="custom-control-input"
+                                value="1" required>
+                            <label class="custom-control-label" for="rdoContactStatus1">有</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="rdoContactStatus2" name="ContactStatus" class="custom-control-input"
+                                value="0" required>
+                            <label class="custom-control-label" for="rdoContactStatus2">無</label>
+                        </div>
+                        <div class="ml-3">
+                            <input type="text" class="form-control" id="txtContactMemo" name="ContactMemo"
+                                maxlength="500" placeholder="請說明">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mt-2">
+                        <label><span class="text-danger">*</span>4 群聚史(Cluster)：家人、室友、同班同學、辦公室同事有沒有類似的症狀？</label>
+                        <br />
+                        <div class="custom-control custom-radio custom-control-inline ml-3 mr-3">
+                            <input type="radio" id="rdoClusterStatus1" name="ClusterStatus" class="custom-control-input"
+                                value="1" required>
+                            <label class="custom-control-label" for="rdoClusterStatus1">有</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="rdoClusterStatus2" name="ClusterStatus" class="custom-control-input"
+                                value="0" required>
+                            <label class="custom-control-label" for="rdoClusterStatus2">無</label>
+                        </div>
+
+                        <div class="ml-3">
+                            <input type="text" class="form-control" id="txtClusterMemo" name="ClusterMemo"
+                                maxlength="500" placeholder="請說明">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary save">儲存</button>
+                        <span class="text-danger"></span>
+                    </div>
+                </form>
+
+
+            </div>
+
+
+
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - 輔仁大學自主健康管理平台 FJCU Self-Health Management Platform
+            <span class="pl-5" style="color: #efefef;">v.20211001.003</span>
+        </div>
+    </footer>
+
+
+    <script src="../bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+
+    <script src="../bundles/bootstrap?v=w6BYJb0bUOvf8s68Ce8tszYipolOdhcRhcKpxn6l8841"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js">
+    </script>
+
+    <script src="../Scripts/App/ShareFunctions.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.jquery.min.js"></script>
+    <script src="../Scripts/App/Questionnaire/travel.js"></script>
+    <script>
+        $('#selCountryName').chosen();
+    </script>
+
+
+
+</body>
+
+</html>

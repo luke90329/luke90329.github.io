@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <title>輔仁大學自主健康管理平台 FJCU Self-Health Management Platform</title>
+
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css"
+        rel="stylesheet" />
+    <link href="../Content/fjufont.css" rel="stylesheet" />
+
+    <script src="../bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+
+
+    <style type="text/css">
+        hr.style-two {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+
+        .table-sm th,
+        .table-sm td {
+            font-size: 90%;
+        }
+
+        th span.en {
+            font-size: 88% !important;
+        }
+
+        div.form-group label.col-form-label {
+            font-weight: bold;
+        }
+
+        #txtMeasuringDate {
+            color: blue;
+        }
+
+        input[type="number"] {
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+        }
+
+        div.subQues {
+            margin-left: 10px;
+        }
+    </style>
+
+
+    <style>
+        .navbar {
+            padding: 0.1rem;
+        }
+
+        .changeLang {
+            font-size: 0.8rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light navbar-toggleable-sm bg-white border-bottom box-shadow mb-3"
+            style="background-color: #e3f2fd;">
+            <div class="container">
+                <img src="../fju-logo.png" style="height:50px;vertical-align:text-bottom" />
+                <a class="navbar-brand" href="../Home/index.html" style="line-height:1.1rem;">
+                    輔仁大學自主健康管理平台 <br />
+                    <span class="enUS-text">FJCU Self-Health Management Platform</span>
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                    class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav mr-auto ml-1 menu">
+
+                        <li class="nav-item">
+
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="" style="width:75px">
+                                填報健康狀況
+                            </a>
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="Travel.html" style="width:75px">
+                                新增旅遊史
+                            </a>
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="../LocationGuest/index.html"
+                                style="width:75px">
+                                FJCU實聯制
+                            </a>
+
+
+                        </li>
+
+
+
+
+
+                    </ul>
+                </div>
+
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle a-text changeLang" data-toggle="dropdown" href="#"
+                                role="button" aria-haspopup="true" aria-expanded="false">Language</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item changeLang"
+                                    href="/Home/SetCulture?culture=zh-TW&amp;returnUrl=%2FQuestionnaire%2FDaily">中文</a>
+                                <a class="dropdown-item changeLang"
+                                    href="/Home/SetCulture?culture=en-US&amp;returnUrl=%2FQuestionnaire%2FDaily">English</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link">
+                                <a href="../index.html" class="eudcFont">徐浤瑋 您好</a>
+                            </span>
+                        </li>
+                        <li>
+                            <a href="../User/Logout.html" class="nav-link btn btn-outline-secondary">登出</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3" style="min-height: 500px;">
+
+
+
+
+            <div>
+                <h4>自主管理健康狀況</h4>
+
+
+
+                <div class="divInfo">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label class="col-form-label col-form-label-sm">學號</label>
+                                <input type="text" readonly class="form-control form-control-sm" value="408402286">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="col-form-label col-form-label-sm">姓名</label>
+                                <input type="text" readonly class="form-control form-control-sm eudcFont" value="徐浤瑋">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label class="col-form-label col-form-label-sm">系所或單位名稱</label>
+                                <input type="text" readonly class="form-control form-control-sm" value="管理學院">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <form id="myForm" method="post" action="../index.html">
+                    <input name="__RequestVerificationToken" type="hidden"
+                        value="ziC9M_-4yghs2XmCSt9OOUKPNSxAkacnzP5WWDk6M1fQ_8C69XChXyc2k0inzsDZH6urB56fhT5BFrsbXOoXK7I2D8v6gl-TIM5mnB50a1o1" />
+                    <input type="hidden" name="Account" value="408402286">
+
+
+                    <div class="form-group row">
+                        <label for="txtMeasuringDate" class="col-form-label ml-3">測量日期 : </label>
+                        <div class="col-sm-2">
+                            <input type="text" readonly class="form-control" id="txtMeasuringDate" name="MeasuringDate"
+                                data-date-format="yyyy/mm/dd" value="">
+                        </div>
+
+                        <label for="txtTemperatureAM" class="col-form-label ml-5">上午體溫(&#176;C 攝氏)</label>
+                        <input type="number" id="txtTemperatureAM" name="TemperatureAM" placeholder="°C" min="0"
+                            max="50" pattern="[0-9]{2}[.]{1}" step="0.1">
+
+                        <label for="txtTemperaturePM" class="col-form-label ml-5">下午體溫(&#176;C 攝氏)</label>
+                        <input type="number" id="txtTemperaturePM" name="TemperaturePM" placeholder="°C" min="0"
+                            max="50" pattern="[0-9]{2}[.]{1}" step="0.1">
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label class="col-form-label"><span class="text-danger">*</span>是否有下列症狀?</label>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="custom-control custom-radio custom-control-inline mr-3">
+                            <input type="radio" id="rdoUnwellSymptom1" name="IsUnwellSymptom"
+                                class="custom-control-input" value="1" required>
+                            <label class="custom-control-label" for="rdoUnwellSymptom1">有</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="rdoUnwellSymptom2" name="IsUnwellSymptom"
+                                class="custom-control-input" value="0" required>
+                            <label class="custom-control-label" for="rdoUnwellSymptom2">無</label>
+                        </div>
+                    </div>
+
+                    <div class="subQues">
+
+
+                        <div class="form-group">
+
+                            <label class="col-form-label">(1) 是否發燒 (耳溫&gt;=38&#176;C，額溫&gt;=37.5&#176;C)?</label>
+                            &nbsp;&nbsp;&nbsp;
+                            <div class="custom-control custom-radio custom-control-inline mr-3">
+                                <input type="radio" id="rdoFever1" name="IsFever" class="custom-control-input" value="1"
+                                    required>
+                                <label class="custom-control-label" for="rdoFever1">有</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="rdoFever2" name="IsFever" class="custom-control-input" value="0"
+                                    required>
+                                <label class="custom-control-label" for="rdoFever2">無</label>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label class="col-form-label">(2) 呼吸道症狀?</label>
+                            &nbsp;&nbsp;&nbsp;
+                            <div class="custom-control custom-radio custom-control-inline mr-3">
+                                <input type="radio" id="rdoRespiratoryDisease1" name="IsRespiratoryDisease"
+                                    class="custom-control-input" value="1" required>
+                                <label class="custom-control-label" for="rdoRespiratoryDisease1">有</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="rdoRespiratoryDisease2" name="IsRespiratoryDisease"
+                                    class="custom-control-input" value="0" required>
+                                <label class="custom-control-label" for="rdoRespiratoryDisease2">無</label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-form-label">(3) 失去嗅覺味覺症狀?</label>
+                            &nbsp;&nbsp;&nbsp;
+                            <div class="custom-control custom-radio custom-control-inline mr-3">
+                                <input type="radio" id="rdoLoseSmellSense1" name="IsLoseSmellSense"
+                                    class="custom-control-input" value="1" required>
+                                <label class="custom-control-label" for="rdoLoseSmellSense1">有</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="rdoLoseSmellSense2" name="IsLoseSmellSense"
+                                    class="custom-control-input" value="0" required>
+                                <label class="custom-control-label" for="rdoLoseSmellSense2">無</label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="col-form-label">(4) 不明原因腹瀉?</label>
+                            &nbsp;&nbsp;&nbsp;
+                            <div class="custom-control custom-radio custom-control-inline mr-3">
+                                <input type="radio" id="rdoEnterorrhea1" name="IsEnterorrhea"
+                                    class="custom-control-input" value="1" required>
+                                <label class="custom-control-label" for="rdoEnterorrhea1">有</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="rdoEnterorrhea2" name="IsEnterorrhea"
+                                    class="custom-control-input" value="0" required>
+                                <label class="custom-control-label" for="rdoEnterorrhea2">無</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group" style="padding-left:12px;">
+                        <label class="col-form-label">(5) 活動史：（例：2021/05/20 08:00 XX早餐店）</label>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="">
+                            <textarea class="form-control" cols="20" data-val="true"
+                                data-val-length="欄位 ActivityMemo 必須是最大長度為 500 的字串。" data-val-length-max="500"
+                                id="ActivityMemo" name="ActivityMemo" placeholder="" rows="5">
+</textarea>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="ActivityMemo"
+                                data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-primary save">儲存</button>
+                        </div>
+                        <div class="col-sm-5"> <span class="text-danger"></span></div>
+                    </div>
+                </form>
+                <a class="mt-5" href="../Questionnaire/SelfHealthList.html">*** 自主管理健康狀況一覽表 ***</a>
+            </div>
+
+
+
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - 輔仁大學自主健康管理平台 FJCU Self-Health Management Platform
+            <span class="pl-5" style="color: #efefef;">v.20211001.003</span>
+        </div>
+    </footer>
+
+
+    <script src="../bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+
+    <script src="../bundles/bootstrap?v=w6BYJb0bUOvf8s68Ce8tszYipolOdhcRhcKpxn6l8841"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js">
+    </script>
+
+    <script src="../Scripts/App/ShareFunctions.js"></script>
+
+
+    <script src="../Scripts/App/Questionnaire/bodyTemperature.js"></script>
+    <script>
+        var Today = new Date();
+        if (Today.getDate() < 10) {
+            var date = "0" + Today.getDate()
+        }
+        document.getElementById("txtMeasuringDate").value = Today.getFullYear() + "/" + (Today.getMonth() + 1) +
+            "/" + date
+    </script>
+
+
+</body>
+
+</html>

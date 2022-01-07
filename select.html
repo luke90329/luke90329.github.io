@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <title>輔仁大學自主健康管理平台 FJCU Self-Health Management Platform</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <link href="Content/fjufont.css" rel="stylesheet" />
+
+    <script src="bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+    <style>
+      .navbar {
+        padding: 0.1rem;
+      }
+
+      .menu > li > a.nav-link {
+        /*padding-left: 0.25rem !important;
+            padding-right: 0.25rem !important;*/
+      }
+
+      .changeLang {
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-sm navbar-light navbar-toggleable-sm bg-white border-bottom box-shadow mb-3"
+        style="background-color: #e3f2fd;"
+      >
+        <div class="container">
+          <img
+            src="fju-logo.png"
+            style="height: 50px; vertical-align: text-bottom;"
+          />
+          <a
+            class="navbar-brand"
+            href="Home/index.html"
+            style="line-height: 1.1rem;"
+          >
+            輔仁大學自主健康管理平台 <br />
+            <span class="enUS-text">FJCU Self-Health Management Platform</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 d-sm-inline-flex flex-sm-row-reverse"
+          >
+            <ul class="navbar-nav mr-auto ml-1 menu">
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-success my-2 my-sm-0"
+                  href="Questionnaire/Daily.html"
+                  style="width: 75px;"
+                >
+                  填報健康狀況
+                </a>
+                <a
+                  class="btn btn-outline-success my-2 my-sm-0"
+                  href="Questionnaire/Travel.html"
+                  style="width: 75px;"
+                >
+                  新增旅遊史
+                </a>
+                <a
+                  class="btn btn-outline-success my-2 my-sm-0"
+                  href="LocationGuest/index.html"
+                  style="width: 75px;"
+                >
+                  FJCU實聯制
+                </a>
+
+                <a
+                  class="btn btn-outline-success my-2 my-sm-0"
+                  href="select.html"
+                  style="width: 75px;"
+                >
+                  疫苗接種假
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle a-text changeLang"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Language</a
+                >
+                <div class="dropdown-menu">
+                  <a
+                    class="dropdown-item changeLang"
+                    href="/Home/SetCulture?culture=zh-TW&amp;returnUrl=%2FLocationGuest%2FComeIn%3Floc%3D94b6ef28-25e5-498c-bef5-7ea4479e6d50-637686113130306591"
+                    >中文</a
+                  >
+                  <a
+                    class="dropdown-item changeLang"
+                    href="/Home/SetCulture?culture=en-US&amp;returnUrl=%2FLocationGuest%2FComeIn%3Floc%3D94b6ef28-25e5-498c-bef5-7ea4479e6d50-637686113130306591"
+                    >English</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link">
+                  <a href="/Questionnaire/Index" class="eudcFont"
+                    >徐浤瑋 您好</a
+                  >
+                </span>
+              </li>
+              <li>
+                <a
+                  href="/User/Logout"
+                  class="nav-link btn btn-outline-secondary"
+                  >登出</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <main role="main" class="pb-3" style="min-height: 500px;">
+        <h2>FJCU實聯制</h2>
+
+        <div class="mt-5">
+          <a
+            class="btn btn-outline-info my-2"
+            href="LocationGuest/ComeIn.html?loc=MD158-國璽樓1樓一粒麥及診所通道"
+            role="button"
+            >國璽診所</a
+          >
+
+          <a
+            class="btn btn-outline-info my-2"
+            href="LocationGuest/ComeIn.html?loc=MD3-國璽樓圖書館三樓入口"
+            role="button"
+            >國璽三樓圖書館</a
+          >
+
+          <a
+            class="btn btn-outline-info my-2"
+            href="LocationGuest/ComeIn.html?loc=JS-濟時樓圖書館入口"
+            role="button"
+            >濟時樓圖書館</a
+          >
+
+          <a
+            class="btn btn-outline-info my-2"
+            href="LocationGuest/ComeIn.html?loc=E-SCHOOL-創新跨領域學院"
+            role="button"
+            >創新跨領域學院</a
+          >
+
+          <a
+            class="btn btn-outline-info my-2"
+            href="LocationGuest/ComeIn.html?loc=A04-仁園餐廳"
+            role="button"
+            >仁園</a
+          >
+        </div>
+      </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+      <div class="container">
+        &copy; 2020 - 輔仁大學自主健康管理平台 FJCU Self-Health Management
+        Platform
+        <span class="pl-5" style="color: #efefef;">v.20211102.001</span>
+      </div>
+    </footer>
+
+    <script src="bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+
+    <script src="bundles/bootstrap?v=w6BYJb0bUOvf8s68Ce8tszYipolOdhcRhcKpxn6l8841"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="Scripts/App/ShareFunctions.js"></script>
+  </body>
+</html>
